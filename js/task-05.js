@@ -7,4 +7,8 @@ input.addEventListener('input', onSpanInput);
 
 function onSpanInput(event) {
   span.textContent = event.currentTarget.value.trim();
+
+  if (event.currentTarget.value === '') {
+    span.textContent = 'Anonymous';
+  }
 }
